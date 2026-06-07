@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VV AI Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>VV</span> AI HUB
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="openLoginModal()">
+                    Login
+                </button>
+
+                <button class="signup-btn" onclick="openSignupModal()">
+                    Sign Up
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+        <h1>Welcome to VV AI Hub</h1>
+
+        <p>
+            Discover the world's best AI tools in one place.
+            Click any category and access top AI platforms instantly.
+        </p>
+
+        <input type="text"
+            id="searchInput"
+            placeholder="Search AI Categories...">
+
+    </section>
+
+    <!-- CATEGORIES -->
+
+    <section id="categories">
+
+        <h2>AI Categories</h2>
+
+        <div class="card-container">
+
+            <div class="tool-card" onclick="showTools('Text Generation')">
+                <i class="fas fa-pen"></i>
+                <h3>Text Generation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Prompt Generation')">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Prompt Generation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Image Generation')">
+                <i class="fas fa-image"></i>
+                <h3>Image Generation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Image Editing')">
+                <i class="fas fa-camera"></i>
+                <h3>Image Editing</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Video Generation')">
+                <i class="fas fa-video"></i>
+                <h3>Video Generation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Video Editing')">
+                <i class="fas fa-film"></i>
+                <h3>Video Editing</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Audio Generation')">
+                <i class="fas fa-music"></i>
+                <h3>Audio Generation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Speech To Text')">
+                <i class="fas fa-microphone"></i>
+                <h3>Speech To Text</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Text To Speech')">
+                <i class="fas fa-volume-up"></i>
+                <h3>Text To Speech</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Translation')">
+                <i class="fas fa-language"></i>
+                <h3>Translation</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Scheduling AI')">
+                <i class="fas fa-calendar"></i>
+                <h3>Scheduling AI</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Virtual Assistants')">
+                <i class="fas fa-robot"></i>
+                <h3>Virtual Assistants</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Data Analysis')">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Analysis</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Coding Assistants')">
+                <i class="fas fa-code"></i>
+                <h3>Coding Assistants</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Chatbots')">
+                <i class="fas fa-comments"></i>
+                <h3>Chatbots</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Document Processing')">
+                <i class="fas fa-file-alt"></i>
+                <h3>Document Processing</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Recommendation Systems')">
+                <i class="fas fa-star"></i>
+                <h3>Recommendation Systems</h3>
+            </div>
+
+            <div class="tool-card" onclick="showTools('Predictive Analytics')">
+                <i class="fas fa-brain"></i>
+                <h3>Predictive Analytics</h3>
+            </div>
+
+            <!-- AI Search Engines -->
+<div class="tool-card" onclick="showTools('AI Search Engines')">
+    <i class="fas fa-search"></i>
+    <h3>AI Search Engines</h3>
+</div>
+
+<!-- Presentation AI -->
+<div class="tool-card" onclick="showTools('Presentation AI')">
+    <i class="fas fa-file-powerpoint"></i>
+    <h3>Presentation AI</h3>
+</div>
+
+<!-- Research Assistants -->
+<div class="tool-card" onclick="showTools('Research Assistants')">
+    <i class="fas fa-book"></i>
+    <h3>Research Assistants</h3>
+</div>
+
+<!-- Resume Builders -->
+<div class="tool-card" onclick="showTools('Resume Builders')">
+    <i class="fas fa-id-card"></i>
+    <h3>Resume Builders</h3>
+</div>
+
+<!-- Productivity AI -->
+<div class="tool-card" onclick="showTools('Productivity AI')">
+    <i class="fas fa-tasks"></i>
+    <h3>Productivity AI</h3>
+</div>
+
+<!-- Marketing AI -->
+<div class="tool-card" onclick="showTools('Marketing AI')">
+    <i class="fas fa-bullhorn"></i>
+    <h3>Marketing AI</h3>
+</div>
+
+<!-- Social Media AI -->
+<div class="tool-card" onclick="showTools('Social Media AI')">
+    <i class="fas fa-hashtag"></i>
+    <h3>Social Media AI</h3>
+</div>
+
+<!-- UI UX Design AI -->
+<div class="tool-card" onclick="showTools('UI UX Design AI')">
+    <i class="fas fa-palette"></i>
+    <h3>UI/UX Design AI</h3>
+</div>
+
+<!-- Education AI -->
+<div class="tool-card" onclick="showTools('Education AI')">
+    <i class="fas fa-graduation-cap"></i>
+    <h3>Education AI</h3>
+</div>
+
+<!-- 3D & Game AI -->
+<div class="tool-card" onclick="showTools('3D & Game AI')">
+    <i class="fas fa-cube"></i>
+    <h3>3D & Game AI</h3>
+</div>
+
+<!-- Finance AI -->
+<div class="tool-card" onclick="showTools('Finance AI')">
+    <i class="fas fa-chart-pie"></i>
+    <h3>Finance AI</h3>
+</div>
+
+<!-- Healthcare AI -->
+<div class="tool-card" onclick="showTools('Healthcare AI')">
+    <i class="fas fa-heartbeat"></i>
+    <h3>Healthcare AI</h3>
+</div>
+
+        </div>
+
+    </section>
+
+    <!-- TOOL POPUP -->
+
+    <div id="toolModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-btn"
+                onclick="closeToolModal()">&times;</span>
+
+            <h2 id="modalTitle">Tools</h2>
+
+            <div id="toolList"></div>
+
+        </div>
+
+    </div>
+
+    <!-- LOGIN MODAL -->
+
+    <div id="loginModal" class="auth-modal">
+
+        <div class="auth-content">
+
+            <span class="close-btn"
+                onclick="closeLoginModal()">&times;</span>
+
+            <h2>Login</h2>
+
+            <input type="email"
+                id="loginEmail"
+                placeholder="Email">
+
+            <input type="password"
+                id="loginPassword"
+                placeholder="Password">
+
+            <button onclick="loginUser()">
+                Login
+            </button>
+
+            <div class="divider">
+                OR
+            </div>
+
+            <button class="google-btn"
+                onclick="googleLogin()">
+
+                <i class="fab fa-google"></i>
+                Continue With Google
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SIGNUP MODAL -->
+
+    <div id="signupModal" class="auth-modal">
+
+        <div class="auth-content">
+
+            <span class="close-btn"
+                onclick="closeSignupModal()">&times;</span>
+
+            <h2>Create Account</h2>
+
+            <input type="text"
+                id="signupName"
+                placeholder="Full Name">
+
+            <input type="email"
+                id="signupEmail"
+                placeholder="Email">
+
+            <input type="password"
+                id="signupPassword"
+                placeholder="Password">
+
+            <button onclick="signupUser()">
+                Create Account
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            <i class="fas fa-envelope"></i>
+            varuncreationsai@gmail.com
+        </p>
+
+       
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>VV AI HUB</h3>
+
+        <p>
+            Explore. Discover. Learn.
+        </p>
+
+    </footer>
+
+    <!-- FIREBASE SDK -->
+
+    <script type="module">
+
+        import { initializeApp }
+        from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+
+        import {
+            getAuth,
+            GoogleAuthProvider
+        }
+        from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+
+        const firebaseConfig = {
+
+            apiKey: "YOUR_API_KEY",
+
+            authDomain:
+                "YOUR_PROJECT.firebaseapp.com",
+
+            projectId:
+                "YOUR_PROJECT_ID",
+
+            storageBucket:
+                "YOUR_PROJECT.appspot.com",
+
+            messagingSenderId:
+                "YOUR_SENDER_ID",
+
+            appId:
+                "YOUR_APP_ID"
+
+        };
+
+        const app =
+            initializeApp(firebaseConfig);
+
+        const auth =
+            getAuth(app);
+
+        window.auth = auth;
+
+        window.GoogleAuthProvider =
+            GoogleAuthProvider;
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
