@@ -18,4 +18,4 @@ VV AI Hub is a modern AI tools aggregator website that helps users discover and 
 
 ## Author
 Varun Sai Shanmukh
-Karri Varshith reddy
+Varshith reddy
